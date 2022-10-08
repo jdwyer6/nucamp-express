@@ -30,7 +30,7 @@ promotionRouter.route('/')
     Promotion.deleteMany()
     .then(response => {
         res.statusCode = 200;
-        res.setHeader('Content-Type', 'appliaction/json');
+        res.setHeader('Content-Type', 'application/json');
         res.json(response);
     })
     .catch(err => next(err));
@@ -41,7 +41,7 @@ promotionRouter.route('/:promotionId')
     Promotion.findById(req.params.promotionId)
     .then(promotion => {
         res.statusCode = 200;
-        res.setHeader('Content-Type', 'appliaction/json');
+        res.setHeader('Content-Type', 'application/json');
         res.json(promotion);
     })
     .catch(err => next(err));
@@ -58,7 +58,7 @@ promotionRouter.route('/:promotionId')
     }, {new: true})
     .then(promotion => {
         res.statusCode = 200;
-        res.setHeader('Content-Type', 'appliaction/json');
+        res.setHeader('Content-Type', 'application/json');
         res.json(promotion);
     })
     .catch(err => next(err));
@@ -67,7 +67,7 @@ promotionRouter.route('/:promotionId')
     Promotion.findByIdAndDelete(req.params.promotionId)
     .then(response => {
         res.statusCode = 200;
-        res.setHeader('Content-Type', 'appliaction/json');
+        res.setHeader('Content-Type', 'application/json');
         res.json(response);
     })
     .catch(err => next(err));

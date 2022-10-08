@@ -30,7 +30,7 @@ partnerRouter.route('/')
     Partner.deleteMany()
     .then(response => {
         res.statusCode = 200;
-        res.setHeader('Content-Type', 'appliaction/json');
+        res.setHeader('Content-Type', 'application/json');
         res.json(response);
     })
     .catch(err => next(err));
@@ -42,7 +42,7 @@ partnerRouter.route('/:partnerId')
     Partner.findById(req.params.partnerId)
     .then(partner => {
         res.statusCode = 200;
-        res.setHeader('Content-Type', 'appliaction/json');
+        res.setHeader('Content-Type', 'application/json');
         res.json(partner);
     })
     .catch(err => next(err));
@@ -58,7 +58,7 @@ partnerRouter.route('/:partnerId')
     }, {new: true})
     .then(partner => {
         res.statusCode = 200;
-        res.setHeader('Content-Type', 'appliaction/json');
+        res.setHeader('Content-Type', 'application/json');
         res.json(partner);
     })
     .catch(err => next(err));
@@ -67,7 +67,7 @@ partnerRouter.route('/:partnerId')
     Partner.findByIdAndDelete(req.params.partnerId)
     .then(response => {
         res.statusCode = 200;
-        res.setHeader('Content-Type', 'appliaction/json');
+        res.setHeader('Content-Type', 'application/json');
         res.json(response);
     })
     .catch(err => next(err));
